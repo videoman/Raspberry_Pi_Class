@@ -3,6 +3,9 @@
 # Hack Factory Raspberry Pi Class.
 # David M. N. Bryan, dave@drstrangelove.net
 #
+# Info on how to wire up the Light sensor can be found at: 
+#  http://learn.adafruit.com/basic-resistor-sensor-reading-on-raspberry-pi/basic-photocell-reading
+#
 
 #import the Raspberry Pi GPIO Library
 import RPi.GPIO as GPIO, time, os

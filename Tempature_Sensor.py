@@ -1,3 +1,8 @@
+# 
+# More info on wiring and what not can be found at: 
+# http://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
+#
+
 import os
 import glob
 import time
