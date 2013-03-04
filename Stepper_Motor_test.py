@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# This code is in need of a clean up...
 # -*- coding: utf-8 -*-
 
 import RPi.GPIO as GPIO

@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+#
+# Hack Factory Raspberry Pi Class.
+# David M. N. Bryan, dave@drstrangelove.net
+#
+# This is licend under creative commons license:
+# http://creativecommons.org/licenses/by-nc-sa/3.0/
+# Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 # 
 # More info on wiring and what not can be found at: 
 # http://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c

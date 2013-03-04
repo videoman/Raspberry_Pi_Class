@@ -6,6 +6,10 @@
 # Info on how to wire up the Light sensor can be found at: 
 #  http://learn.adafruit.com/basic-resistor-sensor-reading-on-raspberry-pi/basic-photocell-reading
 #
+# This is licend under creative commons license:
+# http://creativecommons.org/licenses/by-nc-sa/3.0/
+# Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+#
 
 #import the Raspberry Pi GPIO Library
 import RPi.GPIO as GPIO, time, os
@@ -85,16 +89,16 @@ while True:
   light_level=RCtime(18)
 
   if ( light_level >= 200 ):
-    blink_all_leds(0.25)
-#    blink_led('RED',0.5 )
-#    blink_led('GREEN',0.5 )
-#    blink_led('BLUE',0.5 )
+#    blink_all_leds(0.25)
+    blink_led('RED',0.5 )
+    blink_led('GREEN',0.5 )
+    blink_led('BLUE',0.5 )
 
-  if ( GPIO.input(BUTTON1_PIN) == True ):
-	blink_led('RED',0.5)
+  #if ( GPIO.input(BUTTON1_PIN) == True ):
+	#blink_led('RED',0.5)
 
-  if ( GPIO.input(BUTTON2_PIN) == True ):
-	blink_led('GREEN',0.5)
+  #if ( GPIO.input(BUTTON2_PIN) == True ):
+	#blink_led('GREEN',0.5)
 
-  if ( GPIO.input(BUTTON3_PIN) == True ):
-	blink_led('BLUE',0.5)
+  #if ( GPIO.input(BUTTON3_PIN) == True ):
+	#blink_led('BLUE',0.5)

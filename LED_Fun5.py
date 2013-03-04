@@ -3,6 +3,10 @@
 # Hack Factory Raspberry Pi Class.
 # David M. N. Bryan, dave@drstrangelove.net
 #
+# This is licend under creative commons license:
+# http://creativecommons.org/licenses/by-nc-sa/3.0/
+# Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+#
 
 #import the Raspberry Pi GPIO Library
 import RPi.GPIO as GPIO
