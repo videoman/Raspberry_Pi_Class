@@ -29,6 +29,11 @@ GPIO.setup(GPIORed_PIN, GPIO.OUT)
 GPIO.setup(GPIOGreen_PIN, GPIO.OUT)
 GPIO.setup(GPIOBlue_PIN, GPIO.OUT)
 
+# Tell the user we are going to turn the lights on!
+print "Ok, here is where we turn your lights on!"
+print "PINs are assigned as follows:\nRed:",GPIORed_PIN,"\nGreen:",GPIOGreen_PIN,"\nBlue:",GPIOBlue_PIN
+print "\nAll of the lights should be working\nType Ctrl-c to quit out of the program."
+
 # Turn all of the lights on
 while True:
 	GPIO.output(GPIORed_PIN, True)

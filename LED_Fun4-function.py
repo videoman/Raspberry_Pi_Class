@@ -44,7 +44,16 @@ def blink_all_leds(SLEEP_TIME):
         GPIO.output(GPIOBlue_PIN, False)
         time.sleep(SLEEP_TIME)
 
+# Set the pins low first time around
+GPIO.output(GPIORed_PIN, False)
+GPIO.output(GPIOGreen_PIN, False)
+GPIO.output(GPIOBlue_PIN, False)
+
+print "Hello!"
+print "What happens when you push the button?"
+
 while True:
-  if ( GPIO.input(BUTTON1_PIN) == True ):
+  if ( GPIO.input(BUTTON1_PIN) == False ):
+	print "I blink on and off!"
 	blink_all_leds(1)
 
