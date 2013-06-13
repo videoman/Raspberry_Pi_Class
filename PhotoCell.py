@@ -4,6 +4,9 @@
 # Must be used with GPIO 0.3.1a or later - earlier verions
 # are not fast enough!
 
+# This reads light level in a sudo way from an analog light resistor
+# Major hack, but it works to aproximate it.
+
 import RPi.GPIO as GPIO, time, os      
 
 DEBUG = 1
