@@ -73,7 +73,7 @@ def dual_servo_CW(Servo1PIN,Servo2PIN,SleepTime):
   time.sleep(SleepTime)
   servo.stop_servo(Servo1PIN)
   servo.stop_servo(Servo2PIN)
-  time.sleep(.25)
+  #time.sleep(.25)
 
 # This rotates the feeder wheel Counter Clock Wise (from right to left)
 def servo_CCW(ServoPIN,SleepTime):
@@ -82,7 +82,7 @@ def servo_CCW(ServoPIN,SleepTime):
   time.sleep(SleepTime)
   # Clear servo on Servo1Pin
   servo.stop_servo(ServoPIN)
-  time.sleep(.25)
+  #time.sleep(.25)
 
 # This rotates both feeder wheels Counter Clock Wise (from right to left)
 # at the same time
@@ -93,7 +93,7 @@ def dual_servo_CCW(Servo1PIN,Servo2PIN,SleepTime):
   time.sleep(SleepTime)
   servo.stop_servo(Servo1PIN)
   servo.stop_servo(Servo2PIN)
-  time.sleep(.25)
+  #time.sleep(.25)
 
 # I created a function to feed the "thing" from the approiate side, based
 # on the user input.  This function calls the servo funcations.
@@ -114,7 +114,7 @@ def feed_thing(HopperSide,FeedTime):
      GPIO.output(BeeperPin, False)
      GPIO.output(GPIO_ButtonR_LED_PIN, True)
      print "Ok, food is coming out the right bin!"
-     servo_CCW(Servo2Pin,FeedTime)
+     servo_CW(Servo2Pin,FeedTime)
 
    if(HopperSide == "Both"):
      GPIO.output(GPIO_ButtonL_LED_PIN, False)
@@ -148,20 +148,30 @@ GPIO.output(BeeperPin, False)
 
 def feed_cat(CatName):
   if (CatName == "Thor"):
-    feed_thing("Right",.5)
+    feed_thing("Right",.6)
     time.sleep(.25)
-    feed_thing("Right",.5)
-    time.sleep(.25)
-    feed_thing("Right",.5)
+#    feed_thing("Right",.5)
+#    time.sleep(.25)
+#    feed_thing("Right",.5)
+#    time.sleep(.25)
+#    feed_thing("Right",.5)
 
   if (CatName == "Zelda"):
-    feed_thing("Left",.5)
+    feed_thing("Left",.6)
     time.sleep(.25)
-    feed_thing("Left",.5)
-    time.sleep(.25)
-    feed_thing("Left",.5)
-    time.sleep(.25)
-    feed_thing("Left",.5)
+#    feed_thing("Left",.8)
+#    time.sleep(.25)
+#    feed_thing("Left",.5)
+#    time.sleep(.25)
+#    feed_thing("Left",.5)
+
+def feed_time(Feed_hour,Feed_minute):
+  if time.strftime("%H") == "Feed_hour" and time.strftime("%M") == "Feed_minute":
+    print "Cat Feeing time!"
+    feed_cat("Zelda")
+    time.sleep(1.5)
+    feed_cat("Thor")
+    time.sleep(60)
 
 # This is the main loop where we wait for stuff to happen!
 while True:
@@ -186,10 +196,18 @@ while True:
   elif ( GPIO.input(GPIO_ButtonR_PIN) == True ):
     feed_thing("Right",.5)
 
-  if time.strftime("%H") == "21" and time.strftime("%M") == "01":
+  #feed_time("22","10")
+  if time.strftime("%H") == "20" and time.strftime("%M") == "30":
     print "Cat Feeing time!"
     feed_cat("Zelda")
-    time.sleep(1.5)
+    time.sleep(.5)
+    feed_cat("Thor")
+    time.sleep(60)
+ 
+  if time.strftime("%H") == "10" and time.strftime("%M") == "30":
+    print "Cat Feeing time!"
+    feed_cat("Zelda")
+    time.sleep(.5)
     feed_cat("Thor")
     time.sleep(60)
 
