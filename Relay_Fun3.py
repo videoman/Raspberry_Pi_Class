@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #
-# Hack Factory Raspberry Pi Class.
+# Raspberry Pi Class.
 # David M. N. Bryan, dave@drstrangelove.net
 #
 

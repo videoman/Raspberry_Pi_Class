@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Hack Factory Raspberry Pi Class.
+# Raspberry Pi Class.
 # David M. N. Bryan, dave@drstrangelove.net
 #
 # This is licend under creative commons license:
@@ -22,7 +22,7 @@ GPIOBlue_PIN=22
 BUTTON1_PIN=24
 
 # How long do we sleep between cycles, we can set this to .25 for 1/4
-# of a second, but you may not be able to percive it thank to POV.
+# of a second. 
 SLEEP_TIME=1
 
 # Set the pins on the GPIO up.

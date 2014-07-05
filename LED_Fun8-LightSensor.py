@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Hack Factory Raspberry Pi Class.
+# Raspberry Pi Class.
 # David M. N. Bryan, dave@drstrangelove.net
 #
 # Info on how to wire up the Light sensor can be found at: 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Hack Factory Raspberry Pi Class.
+# Raspberry Pi Class.
 # David M. N. Bryan, dave@drstrangelove.net
 #
 # This is licend under creative commons license:
@@ -29,7 +29,7 @@ GPIO.setup(GPIOBlue_PIN, GPIO.OUT)
 # Enter into a loop...
 while True:
 
-	#Turn on each led...
+	#Turn on all LEDs...
 	GPIO.output(GPIORed_PIN, True)
   	GPIO.output(GPIOGreen_PIN, True)
 	GPIO.output(GPIOBlue_PIN, True)
@@ -42,5 +42,4 @@ while True:
 	# Sleep for a period...
 	time.sleep(SLEEP_TIME)
 	
-
 # Do this until we stop the program.

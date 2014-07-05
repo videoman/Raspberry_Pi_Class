@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Hack Factory Raspberry Pi Class.
+# Raspberry Pi Class.
 # David M. N. Bryan, dave@drstrangelove.net
 #
 # This is licend under creative commons license:
@@ -53,7 +53,7 @@ print "Hello!"
 print "What happens when you push the button?"
 
 while True:
-  if ( GPIO.input(BUTTON1_PIN) == False ):
+  if ( GPIO.input(BUTTON1_PIN) == True ):
 	print "I blink on and off!"
 	blink_all_leds(1)
 

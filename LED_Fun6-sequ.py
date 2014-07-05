@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Hack Factory Raspberry Pi Class.
+# Raspberry Pi Class.
 # David M. N. Bryan, dave@drstrangelove.net
 #
 # This is licend under creative commons license:
@@ -68,12 +68,6 @@ def blink_led(COLOR, SLEEP_TIME):
         time.sleep(SLEEP_TIME)
 
 while True:
-  BUTTONPushed = 0
-
-  """  if ( GPIO.input(BUTTON1_PIN) == True and GPIO.input(BUTTON2_PIN) == True ):
-	print('Both buttons pushed')
-	blink_all_leds(0.25)
-  """
 
   if ( GPIO.input(BUTTON1_PIN) == True ):
 	blink_all_leds(1)
@@ -85,3 +79,4 @@ while True:
 
   if ( BUTTONPushed >= 2):
 	print "Someone pushed both buttons! %d" % (BUTTONPushed)
+	blink_led("RED", .5)
