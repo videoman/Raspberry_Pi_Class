@@ -5,7 +5,7 @@ def set(property, value):
 		f = open("/sys/class/rpi-pwm/pwm0/" + property, 'w')
 		f.write(value)
 		f.close()	
-	except:
+  except:
 		print("Error writing to: " + property + " value: " + value)
 
 

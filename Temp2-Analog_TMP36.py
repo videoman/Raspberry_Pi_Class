@@ -8,6 +8,11 @@ GPIO.setmode(GPIO.BCM)
 DEBUG = 1
 LOGGER = 1
 
+
+# This code uses the MCP3008 chip to pull in analog data using 
+# 10-bits of resolution to read the voltage level from the 
+# analog TMP36 sensor.
+
 # read SPI data from MCP3008 chip, 8 possible adc's (0 thru 7)
 def readadc(adcnum, clockpin, mosipin, misopin, cspin):
         if ((adcnum > 7) or (adcnum < 0)):
