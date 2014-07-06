@@ -1,18 +1,17 @@
 #!/usr/bin/python
 
 import time
-import RPi.GPIO as io 
+import RPi.GPIO as GPIO
+# from Servo2-Angle.py import *
 
-io.setmode(io.BCM)
-
-import Servo2-Angle.py
+GPIO.setmode(GPIO.BCM)
 
 door_pin = 23
 
-io.setup(door_pin,io.IN,pull_up_down=io.PUD_UP) #activateinputwithPullUp
+# Setup the pull up resistor in the circuit.
+GPIO.setup(door_pin,GPIO.IN,pull_up_down=GPIO.PUD_DOWN) 
 
 while True:
-  if io.input(door_pin):
+  if GPIO.input(door_pin):
     print("DOOR ALARM!") 
-    servo_turn(rand(0-180)
     time.sleep(0.5)
