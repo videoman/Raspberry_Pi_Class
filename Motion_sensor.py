@@ -1,7 +1,10 @@
 #!/usr/bin/python
 
 import time
-import RPi.GPIO as io io.setmode(io.BCM)
+import RPi.GPIO as io 
+
+io.setmode(io.BCM)
+
 import Servo2-Angle.py
 
 door_pin = 23
