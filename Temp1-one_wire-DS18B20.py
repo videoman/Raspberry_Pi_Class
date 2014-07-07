@@ -14,6 +14,7 @@
 import os
 import glob
 import time
+from datetime import datetime
 
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
@@ -41,6 +42,7 @@ def read_temp():
         return temp_c, temp_f
 	
 while True:
-	print(read_temp())	
+	temp=read_temp()
+	print "Tempature in C:", temp[0], "Tempature in F:", temp[1], datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 	time.sleep(1)
 
